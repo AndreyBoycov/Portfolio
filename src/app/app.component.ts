@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {ChangeLogFormComponent} from './change-log-form/change-log-form.component';
+import {AddNewOrganizationStructureComponent} from './organization-structure/add-new-organization-structure/add-new-organization-structure.component';
 
 
 @Component({
@@ -12,9 +13,15 @@ export class AppComponent {
   title = 'My Portfolio';
   constructor( public dialog: MatDialog ) {}
 
-  openExample(component) {
+  openExampleOne() {
     this.dialog.open(
       ChangeLogFormComponent
+    );
+  }
+
+  openExampleTwo() {
+    this.dialog.open(
+      AddNewOrganizationStructureComponent
     );
   }
 }
